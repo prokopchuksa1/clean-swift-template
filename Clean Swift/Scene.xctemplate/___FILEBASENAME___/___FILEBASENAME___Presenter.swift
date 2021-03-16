@@ -3,11 +3,12 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 protocol ___VARIABLE_sceneName___PresentationLogic {
-    func presentData(response: ___VARIABLE_sceneName___Models.ViewDidLoad.Response)
+    func presentSome(response: ___VARIABLE_sceneName___Models.ViewDidLoad.Response)
+    func presentSome(response: ___VARIABLE_sceneName___Models.SomeAction.Response)
 }
 
 class ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresentationLogic {
@@ -17,8 +18,13 @@ class ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresentationLog
         self.view = view
     }
 
-    func presentData(response: ___VARIABLE_sceneName___Models.ViewDidLoad.Response) {
+    func presentSome(response: ___VARIABLE_sceneName___Models.ViewDidLoad.Response) {
         let viewModel = ___VARIABLE_sceneName___Models.ViewDidLoad.ViewModel()
-        view?.displayData(viewModel: viewModel)
+        view?.displaySome(viewModel: viewModel)
+    }
+
+    func presentSome(request: ___VARIABLE_sceneName___Models.SomeAction.Request) {
+        let viewModel = ___VARIABLE_sceneName___Models.SomeAction.ViewModel()
+        view?.displaySome(viewModel: viewModel)
     }
 }

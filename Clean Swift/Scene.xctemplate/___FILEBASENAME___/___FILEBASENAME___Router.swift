@@ -3,7 +3,7 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 protocol ___VARIABLE_sceneName___RoutingLogic {
@@ -26,7 +26,7 @@ class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingL
     // MARK: Routing
 
     func routeToSomewhere() {
-//        let destinationView = SomewhereView.fromStoryboard()
+//        let destinationView = SomewhereBuilder().build()
 //        var destinationDataStore = destinationView.router.dataStore
 //        passDataToSomewhere(source: dataStore, destination: &destinationDataStore)
 //        navigateToSomewhere(source: destinationView, destination: destinationView)

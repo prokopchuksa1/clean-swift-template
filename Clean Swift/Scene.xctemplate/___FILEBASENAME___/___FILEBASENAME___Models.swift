@@ -3,11 +3,19 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 enum ___VARIABLE_sceneName___Models {
     enum ViewDidLoad {
+        struct Response {
+        }
+
+        struct ViewModel {
+        }
+    }
+
+    enum SomeAction {
         struct Request {
         }
 
