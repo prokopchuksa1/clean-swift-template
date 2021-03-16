@@ -23,7 +23,7 @@ class ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresentationLog
         view?.displaySome(viewModel: viewModel)
     }
 
-    func presentSome(request: ___VARIABLE_sceneName___Models.SomeAction.Request) {
+    func presentSome(response: ___VARIABLE_sceneName___Models.SomeAction.Response) {
         let viewModel = ___VARIABLE_sceneName___Models.SomeAction.ViewModel()
         view?.displaySome(viewModel: viewModel)
     }

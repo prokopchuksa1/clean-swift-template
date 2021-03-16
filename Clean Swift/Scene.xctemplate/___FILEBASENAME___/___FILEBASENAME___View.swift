@@ -18,7 +18,7 @@ class ___VARIABLE_sceneName___View: UIViewController, DesignableController, ___V
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        inderactor.viewDidLoad()
+        interactor?.viewDidLoad()
     }
 
     func someActionButtonDidTouch() {
