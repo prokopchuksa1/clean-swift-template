@@ -14,7 +14,7 @@ protocol ___VARIABLE_sceneName___DataPassing {
     var dataStore: ___VARIABLE_sceneName___DataStore { get }
 }
 
-class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingLogic, ___VARIABLE_sceneName___DataPassing {
+class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic, ___VARIABLE_sceneName___DataPassing {
     weak var controller: UIViewController?
     var dataStore: ___VARIABLE_sceneName___DataStore
 
@@ -26,7 +26,7 @@ class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingL
     // MARK: Routing
 
     func routeToSomewhere() {
-//        let destinationView = SomewhereBuilder().build()
+//        let destinationView = SomewhereСonfigurator().configure()
 //        var destinationDataStore = destinationView.router.dataStore
 //        passDataToSomewhere(source: dataStore, destination: &destinationDataStore)
 //        navigateToSomewhere(source: destinationView, destination: destinationView)

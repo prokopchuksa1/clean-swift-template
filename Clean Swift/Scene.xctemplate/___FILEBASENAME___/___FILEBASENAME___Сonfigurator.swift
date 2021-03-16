@@ -8,11 +8,11 @@
 import UIKit
 
 protocol ___VARIABLE_sceneName___ConfigurationLogic {
-    func build() -> ___VARIABLE_sceneName___View
+    func configure() -> ___VARIABLE_sceneName___View
 }
 
-class ___VARIABLE_sceneName___Builder {
-    func build() -> ___VARIABLE_sceneName___View {
+class ___VARIABLE_sceneName___Сonfigurator {
+    func configure() -> ___VARIABLE_sceneName___View {
         let view = ___VARIABLE_sceneName___View.fromStoryboard()
         let presenter = ___VARIABLE_sceneName___Presenter(view: view)
         let interactor = ___VARIABLE_sceneName___Interactor(presenter: presenter)
