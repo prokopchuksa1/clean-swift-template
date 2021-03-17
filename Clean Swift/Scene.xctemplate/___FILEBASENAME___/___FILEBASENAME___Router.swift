@@ -7,39 +7,27 @@
 //
 
 protocol ___VARIABLE_sceneName___RoutingLogic {
-    func routeToSomewhere()
+    func routeToSomewhere(data: Any)
 }
 
-protocol ___VARIABLE_sceneName___DataPassing {
-    var dataStore: ___VARIABLE_sceneName___DataStore { get }
-}
-
-class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic, ___VARIABLE_sceneName___DataPassing {
+class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic {
     weak var controller: UIViewController?
-    var dataStore: ___VARIABLE_sceneName___DataStore
 
-    init(controller: UIViewController, dataStore: ___VARIABLE_sceneName___DataStore) {
+    init(controller: UIViewController) {
         self.controller = controller
         self.dataStore = dataStore
     }
 
     // MARK: Routing
 
-    func routeToSomewhere() {
-//        let destinationView = SomewhereСonfigurator().configure()
-//        var destinationDataStore = destinationView.router.dataStore
-//        passDataToSomewhere(source: dataStore, destination: &destinationDataStore)
-//        navigateToSomewhere(source: destinationView, destination: destinationView)
+    func routeToSomewhere(data: Any) {
+//        let destinationView = SomewhereСonfigurator().configure(data: data)
+//        navigateToSomewhere(destination: destinationView)
     }
 
     // MARK: Navigation
 
-    func navigateToSomewhere(source: ___VARIABLE_sceneName___View, destination: UIViewController) {
-//        source.present(view, animated: true)
+    func navigateToSomewhere(destination: UIViewController) {
+//        controller?.present(destionation, animated: true)
     }
-
-    // MARK: Passing data
-//    func passDataToSomewhere(source: ___VARIABLE_sceneName___DataStore, destination: inout SomewhereDataStore) {
-//        destination.data = source.data
-//    }
 }

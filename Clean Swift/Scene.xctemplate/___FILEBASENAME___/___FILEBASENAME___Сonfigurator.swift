@@ -11,13 +11,13 @@ protocol ___VARIABLE_sceneName___ConfigurationLogic {
     func configure() -> ___VARIABLE_sceneName___View
 }
 
-class ___VARIABLE_sceneName___Сonfigurator {
+class ___VARIABLE_sceneName___Сonfigurator: ___VARIABLE_sceneName___ConfigurationLogic {
     func configure() -> ___VARIABLE_sceneName___View {
         let view = ___VARIABLE_sceneName___View.fromStoryboard()
         let presenter = ___VARIABLE_sceneName___Presenter(view: view)
-        let interactor = ___VARIABLE_sceneName___Interactor(presenter: presenter)
+        let router = ___VARIABLE_sceneName___Router(controller: view)
+        let interactor = ___VARIABLE_sceneName___Interactor(presenter: presenter, router: router)
         view.interactor = interactor
-        view.router = ___VARIABLE_sceneName___Router(controller: view, dataStore: interactor)
         return view
     }
 }

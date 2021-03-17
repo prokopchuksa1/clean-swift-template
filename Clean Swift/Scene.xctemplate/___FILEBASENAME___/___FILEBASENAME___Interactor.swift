@@ -11,16 +11,13 @@ protocol ___VARIABLE_sceneName___BusinessLogic {
     func someAction(request: ___VARIABLE_sceneName___Models.SomeAction.Request)
 }
 
-protocol ___VARIABLE_sceneName___DataStore {
-    var data: Any? { get set }
-}
+class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic {
+    private var presenter: ___VARIABLE_sceneName___PresentationLogic
+    private var router: ___VARIABLE_sceneName___RoutingLogic
 
-class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic, ___VARIABLE_sceneName___DataStore {
-    private var presenter: ___VARIABLE_sceneName___PresentationLogic?
-    var data: Any?
-
-    init(presenter: ___VARIABLE_sceneName___PresentationLogic) {
+    init(presenter: ___VARIABLE_sceneName___PresentationLogic, router: ___VARIABLE_sceneName___RoutingLogic) {
         self.presenter = presenter
+        self.router = router
     }
 
     func viewDidLoad() {
