@@ -22,11 +22,11 @@ class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic 
 
     func viewDidLoad() {
         let response = ___VARIABLE_sceneName___Models.ViewDidLoad.Response()
-        presenter?.presentSome(response: response)
+        presenter.presentSome(response: response)
     }
 
     func someAction(request: ___VARIABLE_sceneName___Models.SomeAction.Request) {
         let response = ___VARIABLE_sceneName___Models.SomeAction.Response()
-        presenter?.presentSome(response: response)
+        presenter.presentSome(response: response)
     }
 }

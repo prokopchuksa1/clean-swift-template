@@ -14,7 +14,6 @@ protocol ___VARIABLE_sceneName___DisplayLogic: class {
 
 class ___VARIABLE_sceneName___View: UIViewController, DesignableController, ___VARIABLE_sceneName___DisplayLogic {
     var interactor: ___VARIABLE_sceneName___BusinessLogic?
-    var router: (___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
 
     override func viewDidLoad() {
         super.viewDidLoad()

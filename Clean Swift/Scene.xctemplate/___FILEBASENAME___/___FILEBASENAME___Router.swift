@@ -15,7 +15,6 @@ class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic {
 
     init(controller: UIViewController) {
         self.controller = controller
-        self.dataStore = dataStore
     }
 
     // MARK: Routing
