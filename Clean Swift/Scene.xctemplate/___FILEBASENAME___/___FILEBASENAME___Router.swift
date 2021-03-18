@@ -11,10 +11,10 @@ protocol ___VARIABLE_sceneName___RoutingLogic {
 }
 
 class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic {
-    weak var controller: UIViewController?
+    weak var viewController: UIViewController?
 
-    init(controller: UIViewController) {
-        self.controller = controller
+    init(viewController: UIViewController) {
+        self.viewController = viewController
     }
 
     // MARK: Routing
@@ -27,6 +27,6 @@ class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic {
     // MARK: Navigation
 
     func navigateToSomewhere(destination: UIViewController) {
-//        controller?.present(destionation, animated: true)
+//        viewController?.present(destionation, animated: true)
     }
 }

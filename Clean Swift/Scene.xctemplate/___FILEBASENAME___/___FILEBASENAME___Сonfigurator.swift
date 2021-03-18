@@ -15,7 +15,7 @@ class ___VARIABLE_sceneName___Сonfigurator: ___VARIABLE_sceneName___Configurati
     func configure() -> ___VARIABLE_sceneName___View {
         let view = ___VARIABLE_sceneName___View.fromStoryboard()
         let presenter = ___VARIABLE_sceneName___Presenter(view: view)
-        let router = ___VARIABLE_sceneName___Router(controller: view)
+        let router = ___VARIABLE_sceneName___Router(viewController: view)
         let interactor = ___VARIABLE_sceneName___Interactor(presenter: presenter, router: router)
         view.interactor = interactor
         return view
