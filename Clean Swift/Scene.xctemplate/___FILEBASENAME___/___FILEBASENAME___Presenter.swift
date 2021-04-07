@@ -6,25 +6,33 @@
 //  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-protocol ___VARIABLE_sceneName___PresentationLogic {
-    func presentSome(response: ___VARIABLE_sceneName___Models.ViewDidLoad.Response)
-    func presentSome(response: ___VARIABLE_sceneName___Models.SomeAction.Response)
+protocol ___VARIABLE_sceneName___PresenterProtocol {
+    func presentView(response: ___VARIABLE_sceneName___Models.ViewDidLoad.Response)
+    func presentSomeOne(response: ___VARIABLE_sceneName___Models.SomeActionOne.Response)
+    func presentSomeTwo(response: ___VARIABLE_sceneName___Models.SomeActionTwo.Response)
 }
 
-class ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresentationLogic {
-    private weak var view: ___VARIABLE_sceneName___DisplayLogic?
+class ___VARIABLE_sceneName___Presenter {
+    private weak var view: ___VARIABLE_sceneName___ViewProtocol?
 
-    init(view: ___VARIABLE_sceneName___DisplayLogic) {
+    init(view: ___VARIABLE_sceneName___ViewProtocol) {
         self.view = view
     }
+}
 
-    func presentSome(response: ___VARIABLE_sceneName___Models.ViewDidLoad.Response) {
+extension ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresenterProtocol {
+    func presentView(response: ___VARIABLE_sceneName___Models.ViewDidLoad.Response) {
         let viewModel = ___VARIABLE_sceneName___Models.ViewDidLoad.ViewModel()
-        view?.displaySome(viewModel: viewModel)
+        view?.displayView(viewModel: viewModel)
     }
 
-    func presentSome(response: ___VARIABLE_sceneName___Models.SomeAction.Response) {
-        let viewModel = ___VARIABLE_sceneName___Models.SomeAction.ViewModel()
-        view?.displaySome(viewModel: viewModel)
+    func presentSomeOne(response: ___VARIABLE_sceneName___Models.SomeActionOne.Response) {
+        let viewModel = ___VARIABLE_sceneName___Models.SomeActionOne.ViewModel()
+        view?.displaySomeOne(viewModel: viewModel)
+    }
+
+    func presentSomeTwo(response: ___VARIABLE_sceneName___Models.SomeActionTwo.Response) {
+        let viewModel = ___VARIABLE_sceneName___Models.SomeActionTwo.ViewModel()
+        view?.displaySomeTwo(viewModel: viewModel)
     }
 }

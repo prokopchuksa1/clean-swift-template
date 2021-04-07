@@ -7,17 +7,16 @@
 
 import UIKit
 
-protocol ___VARIABLE_sceneName___ConfigurationLogic {
-    func configure() -> ___VARIABLE_sceneName___View
-}
+class ___VARIABLE_sceneName___Factory: SceneFactoryProtocol {
+    typealias Context = ___VARIABLE_sceneName___Interactor.Context
 
-class ___VARIABLE_sceneName___Сonfigurator: ___VARIABLE_sceneName___ConfigurationLogic {
-    func configure() -> ___VARIABLE_sceneName___View {
+    func create(context: Context) -> UIViewController {
         let view = ___VARIABLE_sceneName___View.fromStoryboard()
         let presenter = ___VARIABLE_sceneName___Presenter(view: view)
+        let interactor = ___VARIABLE_sceneName___Interactor(presenter: presenter, context: context)
         let router = ___VARIABLE_sceneName___Router(viewController: view)
-        let interactor = ___VARIABLE_sceneName___Interactor(presenter: presenter, router: router)
         view.interactor = interactor
+        view.router = router
         return view
     }
 }

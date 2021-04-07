@@ -7,27 +7,40 @@
 
 import PBUI
 
-protocol ___VARIABLE_sceneName___DisplayLogic: class {
-    func displaySome(viewModel: ___VARIABLE_sceneName___Models.ViewDidLoad.ViewModel)
-    func displaySome(viewModel: ___VARIABLE_sceneName___Models.SomeAction.ViewModel)
+protocol ___VARIABLE_sceneName___ViewProtocol: class {
+    func displayView(viewModel: ___VARIABLE_sceneName___Models.ViewDidLoad.ViewModel)
+    func displaySomeOne(viewModel: ___VARIABLE_sceneName___Models.SomeActionOne.ViewModel)
+    func displaySomeTwo(viewModel: ___VARIABLE_sceneName___Models.SomeActionTwo.ViewModel)
 }
 
-class ___VARIABLE_sceneName___View: UIViewController, DesignableController, ___VARIABLE_sceneName___DisplayLogic {
-    var interactor: ___VARIABLE_sceneName___BusinessLogic?
+class ___VARIABLE_sceneName___View: UIViewController, DesignableController {
+    var interactor: ___VARIABLE_sceneName___InteractorProtocol?
+    var router: ___VARIABLE_sceneName___RouterProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor?.viewDidLoad()
     }
 
-    func someActionButtonDidTouch() {
-        let request = ___VARIABLE_sceneName___Models.SomeAction.Request()
-        interactor?.someAction(request: request)
+    func someActionOneButtonDidTouch() {
+        let request = ___VARIABLE_sceneName___Models.SomeActionOne.Request()
+        interactor?.someActionOne(request: request)
     }
 
-    func displaySome(viewModel: ___VARIABLE_sceneName___Models.ViewDidLoad.ViewModel) {
+    func someActionTwoButtonDidTouch() {
+        let request = ___VARIABLE_sceneName___Models.SomeActionTwo.Request()
+        interactor?.someActionTwo(request: request)
+    }
+}
+
+extension ___VARIABLE_sceneName___View: ___VARIABLE_sceneName___ViewProtocol {
+    func displayView(viewModel: ___VARIABLE_sceneName___Models.ViewDidLoad.ViewModel) {
     }
 
-    func displaySome(viewModel: ___VARIABLE_sceneName___Models.SomeAction.ViewModel) {
+    func displaySomeOne(viewModel: ___VARIABLE_sceneName___Models.SomeActionOne.ViewModel) {
+    }
+
+    func displaySomeTwo(viewModel: ___VARIABLE_sceneName___Models.SomeActionTwo.ViewModel) {
+        router?.routeToSomewhere(context: viewModel)
     }
 }

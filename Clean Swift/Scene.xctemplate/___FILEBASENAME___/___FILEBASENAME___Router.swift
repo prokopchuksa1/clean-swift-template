@@ -6,12 +6,12 @@
 //  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-protocol ___VARIABLE_sceneName___RoutingLogic {
-    func routeToSomewhere(data: Any)
+protocol ___VARIABLE_sceneName___RouterProtocol {
+    func routeToSomewhere(context: Any) // (context: SomewhereInteractor.Context)
 }
 
-class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic {
-    weak var viewController: UIViewController?
+class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RouterProtocol {
+    private weak var viewController: UIViewController?
 
     init(viewController: UIViewController) {
         self.viewController = viewController
@@ -19,14 +19,14 @@ class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic {
 
     // MARK: Routing
 
-    func routeToSomewhere(data: Any) {
-//        let destinationView = SomewhereСonfigurator().configure(data: data)
-//        navigateToSomewhere(destination: destinationView)
+    func routeToSomewhere(context: Any) { // (context: SomewhereInteractor.Context)
+        //        let destinationView = SomewhereFactory().create(context: context)
+        //        navigateToSomewhere(destination: destinationView)
     }
 
     // MARK: Navigation
 
     func navigateToSomewhere(destination: UIViewController) {
-//        viewController?.present(destionation, animated: true)
+        viewController?.present(destination, animated: true)
     }
 }

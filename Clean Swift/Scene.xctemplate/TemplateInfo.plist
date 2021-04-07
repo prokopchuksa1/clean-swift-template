@@ -36,13 +36,13 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_sceneName:identifier___Configurator</string>
+			<string>___VARIABLE_sceneName:identifier___Factory</string>
 			<key>Description</key>
-			<string>The configurator name</string>
+			<string>The factory name</string>
 			<key>Identifier</key>
-			<string>configuratorName</string>
+			<string>factoryName</string>
 			<key>Name</key>
-			<string>Configurator Name:</string>
+			<string>Factory Name:</string>
 			<key>Required</key>
 			<string>1</string>
 			<key>Type</key>

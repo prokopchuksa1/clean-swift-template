@@ -7,15 +7,27 @@
 //
 
 enum ___VARIABLE_sceneName___Models {
+    struct Response {
+    }
+
     enum ViewDidLoad {
-        struct Response {
-        }
+        typealias Response = ___VARIABLE_sceneName___Models.Response
 
         struct ViewModel {
         }
     }
 
-    enum SomeAction {
+    enum SomeActionOne {
+        struct Request {
+        }
+
+        typealias Response = ___VARIABLE_sceneName___Models.Response
+
+        struct ViewModel {
+        }
+    }
+
+    enum SomeActionTwo {
         struct Request {
         }
 
