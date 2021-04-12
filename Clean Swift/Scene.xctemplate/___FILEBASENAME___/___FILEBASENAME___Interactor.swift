@@ -14,7 +14,7 @@ protocol ___VARIABLE_sceneName___InteractorProtocol {
 
 final class ___VARIABLE_sceneName___Interactor {
     struct Context {
-        var data: Any
+        let data: Any
     }
 
     private let presenter: ___VARIABLE_sceneName___PresenterProtocol
