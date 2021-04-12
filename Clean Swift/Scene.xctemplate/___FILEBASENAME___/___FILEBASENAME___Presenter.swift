@@ -12,7 +12,7 @@ protocol ___VARIABLE_sceneName___PresenterProtocol {
     func presentSomeTwo(response: ___VARIABLE_sceneName___Models.SomeActionTwo.Response)
 }
 
-class ___VARIABLE_sceneName___Presenter {
+final class ___VARIABLE_sceneName___Presenter {
     private weak var view: ___VARIABLE_sceneName___ViewProtocol?
 
     init(view: ___VARIABLE_sceneName___ViewProtocol) {
