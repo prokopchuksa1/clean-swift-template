@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ___VARIABLE_sceneName___Factory: SceneFactoryProtocol {
+final class ___VARIABLE_sceneName___Factory: SceneFactoryProtocol {
     typealias Context = ___VARIABLE_sceneName___Interactor.Context
 
     func create(context: Context) -> UIViewController {

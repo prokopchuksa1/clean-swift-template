@@ -10,7 +10,7 @@ protocol ___VARIABLE_sceneName___RouterProtocol {
     func routeToSomewhere(context: Any) // (context: SomewhereInteractor.Context)
 }
 
-class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RouterProtocol {
+final class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RouterProtocol {
     private weak var viewController: UIViewController?
 
     init(viewController: UIViewController) {

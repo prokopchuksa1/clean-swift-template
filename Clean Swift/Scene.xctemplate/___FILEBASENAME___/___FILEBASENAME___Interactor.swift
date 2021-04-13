@@ -12,9 +12,9 @@ protocol ___VARIABLE_sceneName___InteractorProtocol {
     func someActionTwo(request: ___VARIABLE_sceneName___Models.SomeActionTwo.Request)
 }
 
-class ___VARIABLE_sceneName___Interactor {
+final class ___VARIABLE_sceneName___Interactor {
     struct Context {
-        var data: Any
+        let data: Any
     }
 
     private let presenter: ___VARIABLE_sceneName___PresenterProtocol

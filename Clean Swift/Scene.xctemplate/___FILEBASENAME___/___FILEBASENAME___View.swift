@@ -13,7 +13,7 @@ protocol ___VARIABLE_sceneName___ViewProtocol: class {
     func displaySomeTwo(viewModel: ___VARIABLE_sceneName___Models.SomeActionTwo.ViewModel)
 }
 
-class ___VARIABLE_sceneName___View: UIViewController, DesignableController {
+final class ___VARIABLE_sceneName___View: UIViewController, DesignableController {
     var interactor: ___VARIABLE_sceneName___InteractorProtocol?
     var router: ___VARIABLE_sceneName___RouterProtocol?
 
