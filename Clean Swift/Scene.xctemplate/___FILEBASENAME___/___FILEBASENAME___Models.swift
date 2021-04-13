@@ -6,6 +6,7 @@
 //  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
+// swiftlint:disable nesting
 enum ___VARIABLE_sceneName___Models {
     enum ViewDidLoad {
         struct Response {
